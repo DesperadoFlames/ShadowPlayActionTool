@@ -60,8 +60,6 @@ extension GameScene {
 //        human.backCalf = Calf_2()
 //        human.frontFoot = Foot_2()
 //        human.backFoot = Foot_2()
-        
-        
         human.combine()
         self.addChild(human)
         human.setScale(0.05)

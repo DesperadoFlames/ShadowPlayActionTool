@@ -115,7 +115,7 @@ class AttachPointNode: SKShapeNode {
     }
     
     func reposition(p: ShadowPlayPiece) {
-        let parentSize = p.texture!.size()
+        let parentSize = p.texture!.size() * 16.666666667
         self.position = CGPoint(x: (self.anchorPosX - p.anchorPoint.x) * parentSize.width, y: (self.anchorPosY - p.anchorPoint.y) * parentSize.height)
     }
     
