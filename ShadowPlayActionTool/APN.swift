@@ -120,7 +120,7 @@ class AttachPointNode: SKShapeNode {
     }
     
     func canAttach(to other: AttachPointNode) -> Bool {
-        if (self.isConnected || other.isConnected) {return false}
+        if (self.isConnected || other.isConnected) { return false }
         if self.hasPair != other.hasPair { return false }
         if !self.hasPair {return true}
         return abs(self.distance!.distance - other.distance!.distance) < 2

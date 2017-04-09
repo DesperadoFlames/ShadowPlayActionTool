@@ -178,7 +178,8 @@ class Hand: BodyPart {
     override func addChild(_ node: SKNode) {
         if let weapon = node as? Weapon {
             self.childAnchor.addChild(weapon)
-            weapon.position = weapon.position - weapon.primaryHandAPN!.positionInNode(self.childAnchor)
+            print((weapon.primaryHandAPN!.positionInNode(self.childAnchor)))
+            weapon.position = weapon.position - (weapon.primaryHandAPN!.positionInNode(self.childAnchor)) * 10000
         } else {
             super.addChild(node)
         }

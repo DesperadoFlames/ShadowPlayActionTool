@@ -61,6 +61,7 @@ extension GameScene {
 //        human.backCalf = Calf_2()
 //        human.frontFoot = Foot_2()
 //        human.backFoot = Foot_2()
+        
         human.combine()
         self.addChild(human)
         human.position.x = -450
@@ -77,7 +78,9 @@ class Temp_long_blade_combined: WeaponAuxPiece {
     
     override func postInit() {
         super.postInit()
+        self.setScale(0.5)
         AttachPointNode.pair(primaryNode: self.attachPointNodes[0], secondaryNode: self.attachPointNodes[1])
+        self.anchorPoint = CGPoint(x: self.attachPointNodes[0].anchorPosX, y: self.attachPointNodes[0].anchorPosY)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -94,7 +97,8 @@ class Temp_blade_combined: WeaponAuxPiece {
     
     override func postInit() {
         super.postInit()
-        
+        self.setScale(0.5)
+        self.anchorPoint = CGPoint(x: self.attachPointNodes[0].anchorPosX, y: self.attachPointNodes[0].anchorPosY)
     }
     
     required init?(coder aDecoder: NSCoder) {

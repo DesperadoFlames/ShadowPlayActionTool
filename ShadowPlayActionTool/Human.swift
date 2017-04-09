@@ -141,7 +141,7 @@ class Human: SKNode {
 	
 	func setWeaponTransform() {
 		if self.doubleHandedWeapon != nil {
-			let diffVec = self.backHand!.childAnchor.positionInNode(self.body!) - self.frontHand!.childAnchor.positionInNode(self.body!)
+            let diffVec = self.backHand!.childAnchor.positionInNode(self.body!) - self.frontHand!.childAnchor.positionInNode(self.body!)
 			self.frontHand?.childAnchor.zRotation = atan2(diffVec.y, diffVec.x) - self.frontHand!.absoluteZRotation - CGFloat(Double.pi / 2)
 		}
 	}

@@ -49,9 +49,4 @@ class PlayerCombinablePiece: ShadowPlayPiece {
         }
         return false
     }
-    
-//    override func setScale(_ scale: CGFloat) {
-//        
-////        fatalError()
-//    }
 }
