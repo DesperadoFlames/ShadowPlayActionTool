@@ -7,86 +7,110 @@
 //
 
 import SpriteKit
-import GameplayKit
 
 class GameScene: SKScene {
+    static var shared: GameScene? = nil
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    var human: Human = Human(body: Body_2(), head: Head_2())
     
     override func didMove(to view: SKView) {
+        GameScene.shared = self
         
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
-        
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
-        }
+        let background = Background()
+        let floatingItemContainer = FloatingItemContainer()
+        addChildren(args: background, floatingItemContainer)
+        //        demoScroll()
+        demoHuman()
     }
-    
-    
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
-    }
-    
-    override func mouseDown(with event: NSEvent) {
-        self.touchDown(atPoint: event.location(in: self))
-    }
-    
-    override func mouseDragged(with event: NSEvent) {
-        self.touchMoved(toPoint: event.location(in: self))
-    }
-    
-    override func mouseUp(with event: NSEvent) {
-        self.touchUp(atPoint: event.location(in: self))
-    }
-    
-    override func keyDown(with event: NSEvent) {
-        switch event.keyCode {
-        case 0x31:
-            if let label = self.label {
-                label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-            }
-        default:
-            print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
-        }
-    }
-    
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        
     }
+}
+
+
+/// For testing
+extension GameScene {
+    
+    //    func demoWorkStationScene() {
+    //        let workStation = WorkStation()
+    //        self.addChild(workStation)
+    //    }
+    
+    func demoHead() {
+        let head = SKSpriteNode(imageNamed: "head")
+        self.addChild(head)
+    }
+    
+    func demoScroll() {
+        let designTable = DesignTable()
+        let bag = Bag()
+        //        let s = Scroll(width: 500, height: 300, isScrollable: true, isVertical: false, maxContentLength: 1500)
+        self.addChildren(args: bag, designTable)
+        bag.state = .open
+        //        bag.expandToLength(300)
+    }
+    
+    func demoHuman() {
+        human.frontArm = Arm_1()
+        human.backArm = Arm_1()
+        human.frontHand = Hand_1()
+        human.backHand = Hand_1()
+        human.frontThigh = Thigh_1()
+        human.backThigh = Thigh_1()
+        human.frontCalf = Calf_1()
+        human.backCalf = Calf_1()
+        human.frontFoot = Foot_1()
+        human.backFoot = Foot_1()
+        
+//        human.frontArm = Arm_2()
+//        human.backArm = Arm_2()
+//        human.frontHand = Hand_2()
+//        human.backHand = Hand_2()
+//        human.frontThigh = Thigh_2()
+//        human.backThigh = Thigh_2()
+//        human.frontCalf = Calf_2()
+//        human.backCalf = Calf_2()
+//        human.frontFoot = Foot_2()
+//        human.backFoot = Foot_2()
+        human.combine()
+        self.addChild(human)
+        human.setScale(0.045)
+        human.position.y = -human.calculateAccumulatedFrame().minY - human.parent!.frame.height / 2
+    }
+}
+
+class Temp_long_blade_combined: WeaponAuxPiece {
+    init() {
+        super.init(imgStr: "temp_long_blade_combined", attachPointNodes: [AttachPointNode(x: 515, y: 500, type: .hand), AttachPointNode(x: 515, y: 2100, type: .hand)], mass: 0)
+        postInit()
+    }
+    
+    override func postInit() {
+        super.postInit()
+        AttachPointNode.pair(primaryNode: self.attachPointNodes[0], secondaryNode: self.attachPointNodes[1])
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        postInit()
+    }
+}
+
+class Temp_blade_combined: WeaponAuxPiece {
+    init() {
+        super.init(imgStr: "temp_blade_combined", attachPointNodes: [AttachPointNode(x: 506, y: 358, type: .hand)], mass: 0)
+        postInit()
+    }
+    
+    override func postInit() {
+        super.postInit()
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        postInit()
+    }
+    
 }
