@@ -798,6 +798,9 @@
                                 <rect key="frame" x="48" y="621" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="-1.57079632679" maxValue="1.57079632679" tickMarkPosition="above" sliderType="linear" id="YdR-GD-yb2"/>
+                                <connections>
+                                    <action selector="headEdit:" target="XfG-lQ-9wD" id="qBD-Hq-Jof"/>
+                                </connections>
                             </slider>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDM-UQ-jpj">
                                 <rect key="frame" x="291" y="615" width="65" height="32"/>
@@ -811,31 +814,49 @@
                                 <rect key="frame" x="48" y="596" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="-1.57079632679" maxValue="1.57079632679" tickMarkPosition="above" sliderType="linear" id="dko-1S-9Ue"/>
+                                <connections>
+                                    <action selector="bodyEdit:" target="XfG-lQ-9wD" id="xrI-JN-Bjo"/>
+                                </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exe-dp-IUP">
                                 <rect key="frame" x="48" y="571" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="-1.57079632679" maxValue="3.1415926000000001" tickMarkPosition="above" sliderType="linear" id="uEq-lP-H9A"/>
+                                <connections>
+                                    <action selector="backArmEdit:" target="XfG-lQ-9wD" id="8IV-Jz-iwa"/>
+                                </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-2Y-Lih">
                                 <rect key="frame" x="48" y="546" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="3.1415926000000001" tickMarkPosition="above" sliderType="linear" id="7Ca-Dj-PaX"/>
+                                <connections>
+                                    <action selector="backHandEdit:" target="XfG-lQ-9wD" id="ZMl-eW-2wz"/>
+                                </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y6U-hV-49p">
                                 <rect key="frame" x="48" y="521" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="-1.57079632679" maxValue="1.57079632679" tickMarkPosition="above" sliderType="linear" id="ipS-ie-MBb"/>
+                                <connections>
+                                    <action selector="backThighEdit:" target="XfG-lQ-9wD" id="cXX-y6-6t9"/>
+                                </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHN-zk-OUA">
                                 <rect key="frame" x="48" y="496" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="-3.1415926000000001" tickMarkPosition="above" sliderType="linear" id="q4N-nU-e5w"/>
+                                <connections>
+                                    <action selector="backCalfEdit:" target="XfG-lQ-9wD" id="K3P-3r-hNC"/>
+                                </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ySq-Y8-evH">
                                 <rect key="frame" x="48" y="471" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="-1.57079632679" maxValue="1.57079632679" tickMarkPosition="above" sliderType="linear" id="M9O-s6-ozm"/>
+                                <connections>
+                                    <action selector="backFootEdit:" target="XfG-lQ-9wD" id="olg-48-WYg"/>
+                                </connections>
                             </slider>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUZ-II-J2M">
                                 <rect key="frame" x="291" y="590" width="65" height="32"/>
@@ -1108,6 +1129,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="aiffsTouch:" target="XfG-lQ-9wD" id="hdX-qm-c4t"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XJp-FI-xZe">
                                 <rect key="frame" x="681" y="449" width="71" height="32"/>
@@ -1132,6 +1156,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="HiraginoSansGB-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="ChangeAlpha:" target="XfG-lQ-9wD" id="Lg3-Hd-5ET"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WsD-xr-rt7">
                                 <rect key="frame" x="638" y="416" width="114" height="32"/>
@@ -1156,6 +1183,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="HiraginoSansGB-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="resetAllIndices:" target="XfG-lQ-9wD" id="hke-fO-pzm"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4J-VW-3sJ">
                                 <rect key="frame" x="359" y="416" width="106" height="32"/>
@@ -1164,6 +1194,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="HiraginoSansGB-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="resetCurrIdx:" target="XfG-lQ-9wD" id="fEr-wJ-2tY"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S9x-i2-MiL">
                                 <rect key="frame" x="363" y="590" width="324" height="26"/>
@@ -1192,6 +1225,9 @@
                                 <rect key="frame" x="407" y="393" width="341" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="0.050000000000000003" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="72u-oW-ENK"/>
+                                <connections>
+                                    <action selector="setHumanSpeed:" target="XfG-lQ-9wD" id="xJh-Nh-5Nb"/>
+                                </connections>
                             </slider>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scY-lE-Rvy">
                                 <rect key="frame" x="365" y="364" width="53" height="17"/>
@@ -1287,31 +1323,67 @@
                                 <rect key="frame" x="48" y="447" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="-1.57079632679" maxValue="3.1415926000000001" tickMarkPosition="above" sliderType="linear" id="Fby-Et-8wS"/>
+                                <connections>
+                                    <action selector="frontArmEdit:" target="XfG-lQ-9wD" id="2RS-2t-RlF"/>
+                                </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77V-mM-dAe">
                                 <rect key="frame" x="48" y="422" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="3.1415926000000001" tickMarkPosition="above" sliderType="linear" id="tky-cM-NXM"/>
+                                <connections>
+                                    <action selector="frontHandEdit:" target="XfG-lQ-9wD" id="DuT-nQ-0et"/>
+                                </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOJ-K8-h9C">
                                 <rect key="frame" x="48" y="397" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="-1.57079632679" maxValue="1.57079632679" tickMarkPosition="above" sliderType="linear" id="6uX-L5-97x"/>
+                                <connections>
+                                    <action selector="frontThighEdit:" target="XfG-lQ-9wD" id="1y7-qF-lki"/>
+                                </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Fq-mu-f4t">
                                 <rect key="frame" x="48" y="372" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="-3.1415926000000001" tickMarkPosition="above" sliderType="linear" id="miN-lT-afT"/>
+                                <connections>
+                                    <action selector="frontCalfEdit:" target="XfG-lQ-9wD" id="8Kj-qv-bmP"/>
+                                </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aad-OF-u5b">
                                 <rect key="frame" x="48" y="347" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="-1.57079632679" maxValue="1.57079632679" tickMarkPosition="above" sliderType="linear" id="6CG-3b-53n"/>
+                                <connections>
+                                    <action selector="frontFootEdit:" target="XfG-lQ-9wD" id="9vz-nX-qPX"/>
+                                </connections>
                             </slider>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="Alpha" destination="iPS-oK-z1q" id="hSB-RC-09U"/>
+                        <outlet property="actionNoText" destination="9Dx-Re-Amq" id="KGR-pZ-uby"/>
+                        <outlet property="anchorIsFrontFootSwitch" destination="mfY-1M-lac" id="BaE-rT-dZm"/>
+                        <outlet property="backArmSlider" destination="exe-dp-IUP" id="n5L-nh-Ztn"/>
+                        <outlet property="backCalfSlider" destination="pHN-zk-OUA" id="FkI-dB-DTw"/>
+                        <outlet property="backFootSlider" destination="ySq-Y8-evH" id="vT8-JD-lxF"/>
+                        <outlet property="backHandSlider" destination="PMK-2Y-Lih" id="Swb-6K-qsY"/>
+                        <outlet property="backThighSlider" destination="Y6U-hV-49p" id="ZuU-Fn-A2o"/>
+                        <outlet property="bodySlider" destination="f1k-bV-Net" id="Djp-pL-dub"/>
+                        <outlet property="durText" destination="tbs-Ir-Mee" id="T4h-Fs-JpJ"/>
+                        <outlet property="frontArmSlider" destination="m8d-Nr-nTj" id="nxC-LZ-2g2"/>
+                        <outlet property="frontCalfSlider" destination="3Fq-mu-f4t" id="dfD-K5-gAw"/>
+                        <outlet property="frontFootSlider" destination="Aad-OF-u5b" id="bMW-W0-JqM"/>
+                        <outlet property="frontHandSlider" destination="77V-mM-dAe" id="ZnL-Sj-dA3"/>
+                        <outlet property="frontThighSlider" destination="OOJ-K8-h9C" id="bfx-Uo-Utx"/>
+                        <outlet property="headSlider" destination="vMN-70-2T1" id="m9X-JY-oGd"/>
+                        <outlet property="heightText" destination="TsQ-tY-jte" id="wLL-62-WEP"/>
+                        <outlet property="label" destination="7B1-rh-uLI" id="NSF-ld-KXq"/>
+                        <outlet property="picker" destination="S9x-i2-MiL" id="JRj-Wl-PVW"/>
+                        <outlet property="repeatSwitch" destination="5Si-em-FMb" id="yoj-xF-NyI"/>
                         <outlet property="skView" destination="m2S-Jp-Qdl" id="qux-te-cT3"/>
+                        <outlet property="timeText" destination="sj1-Uw-wTp" id="Df0-ol-rmr"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
