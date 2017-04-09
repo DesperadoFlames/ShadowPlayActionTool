@@ -207,7 +207,79 @@ class ViewController: NSViewController {
     @IBAction func aiffsTouch(_ sender: Any) {
         anchorIsFrontFoots[currentIdx] = anchorIsFrontFoot
     }
+    @IBAction func head_reverse(_ sender: Any) {
+        headSlider.doubleValue = 0
+        valArray[currentIdx][0] = 0
+        human.head?.zRotation = 0
+        human.setWeaponTransform()
+    }
+    @IBAction func body_reverse(_ sender: Any) {
+        bodySlider.doubleValue = 0
+        valArray[currentIdx][1] = 0
+        human.body?.zRotation = 0
+        human.setWeaponTransform()
+    }
+    @IBAction func frontArm_reverse(_ sender: Any) {
+        frontArmSlider.doubleValue = 0
+        valArray[currentIdx][2] = 0
+        human.frontArm?.zRotation = 0
+        human.setWeaponTransform()
+    }
+    @IBAction func frontHand_reverse(_ sender: Any) {
+        frontHandSlider.doubleValue = 0
+        valArray[currentIdx][3] = 0
+        human.frontHand?.zRotation = 0
+        human.setWeaponTransform()
+    }
+    @IBAction func backArm_reverse(_ sender: Any) {
+        backArmSlider.doubleValue = 0
+        valArray[currentIdx][4] = 0
+        human.backArm?.zRotation = 0
+        human.setWeaponTransform()
+    }
+    @IBAction func backHand_reverse(_ sender: Any) {
+        backHandSlider.doubleValue = 0
+        valArray[currentIdx][5] = 0
+        human.backHand?.zRotation = 0
+        human.setWeaponTransform()
+    }
+    @IBAction func frontThigh_reverse(_ sender: Any) {
+        frontThighSlider.doubleValue = 0
+        valArray[currentIdx][6] = 0
+        human.frontThigh?.zRotation = 0
+        human.setWeaponTransform()
+    }
     
+    @IBAction func frontCalf_reverse(_ sender: Any) {
+        frontCalfSlider.doubleValue = 0
+        valArray[currentIdx][7] = 0
+        human.frontCalf?.zRotation = 0
+        human.setWeaponTransform()
+    }
+    @IBAction func backThigh_reverse(_ sender: Any) {
+        backThighSlider.doubleValue = 0
+        valArray[currentIdx][8] = 0
+        human.backThigh?.zRotation = 0
+        human.setWeaponTransform()
+    }
+    @IBAction func backCalf_reverse(_ sender: Any) {
+        backCalfSlider.doubleValue = 0
+        valArray[currentIdx][9] = 0
+        human.backCalf?.zRotation = 0
+        human.setWeaponTransform()
+    }
+    @IBAction func frontFoot_reverse(_ sender: Any) {
+        frontFootSlider.doubleValue = 0
+        valArray[currentIdx][10] = 0
+        human.frontFoot?.zRotation = 0
+        human.setWeaponTransform()
+    }
+    @IBAction func backFoot_reverse(_ sender: Any) {
+        backFootSlider.doubleValue = 0
+        valArray[currentIdx][11] = 0
+        human.backFoot?.zRotation = 0
+        human.setWeaponTransform()
+    }
     
     
     
