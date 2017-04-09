@@ -12,6 +12,7 @@ class GameScene: SKScene {
     static var shared: GameScene? = nil
     
     var human: Human = Human(body: Body_1(), head: Head_1())
+    var vc: ViewController? = nil
     
     override func didMove(to view: SKView) {
         GameScene.shared = self
@@ -25,7 +26,7 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        
+        vc?.update()
     }
 }
 
@@ -62,7 +63,8 @@ extension GameScene {
 //        human.backFoot = Foot_2()
         human.combine()
         self.addChild(human)
-        human.setScale(0.05)
+        human.position.x = -450
+        human.setScale(0.03)
         human.position.y = -human.calculateAccumulatedFrame().minY - human.parent!.frame.height / 2
     }
 }

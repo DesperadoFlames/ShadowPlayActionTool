@@ -280,11 +280,227 @@ class ViewController: NSViewController {
         human.backFoot?.zRotation = 0
         human.setWeaponTransform()
     }
+    @IBAction func heightPlusOne(_ sender: Any) {
+        height += 1
+    }
+    @IBAction func heightMinusOne(_ sender: Any) {
+        height -= 1
+    }
+    @IBAction func heightPlusTen(_ sender: Any) {
+        height += 10
+    }
+    @IBAction func heightMinusTen(_ sender: Any) {
+        height -= 10
+    }
+    @IBAction func durPlusPPOne(_ sender: Any) {
+        dur += 0.01
+    }
+    @IBAction func durMinusPPOne(_ sender: Any) {
+        dur -= 0.01
+    }
+    @IBAction func durPlusPOne(_ sender: Any) {
+        dur += 0.1
+    }
+    @IBAction func durMinusPOne(_ sender: Any) {
+        dur -= 0.1
+    }
+    @IBAction func resetX(_ sender: Any) {
+        human.position.x = -450
+    }
+    @IBAction func First(_ sender: Any) {
+        currentIdx = 0
+        setElementsToVals()
+    }
+    @IBAction func Up(_ sender: Any) {
+        if currentIdx < valArray.count-1 {
+            currentIdx += 1
+            if valArray.count <= currentIdx {
+                valArray.append([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+                timeArray.append(0)
+                anchorIsFrontFoots.append(false)
+            }
+            setElementsToVals()
+        }
+    }
+    @IBAction func Insert(_ sender: Any) {
+        valArray.insert(valArray[currentIdx], at: currentIdx+1)
+        timeArray.insert(timeArray[currentIdx], at: currentIdx+1)
+        anchorIsFrontFoots.insert(anchorIsFrontFoots[currentIdx], at: currentIdx+1)
+        currentIdx += 1
+        setElementsToVals()
+    }
+    @IBAction func Down(_ sender: Any) {
+        if currentIdx >= 1 {
+            currentIdx -= 1
+        }
+        setElementsToVals()
+    }
+    @IBAction func Last(_ sender: Any) {
+        currentIdx = valArray.count - 1
+        setElementsToVals()
+    }
+    @IBAction func copyIdx(_ sender: Any) {
+        copiedVals = valArray[currentIdx]
+        copiedDur = timeArray[currentIdx]
+        copiedAiff = anchorIsFrontFoots[currentIdx]
+    }
+    @IBAction func pasteIdx(_ sender: Any) {
+        valArray[currentIdx] = copiedVals
+        timeArray[currentIdx] = copiedDur
+        anchorIsFrontFoots[currentIdx] = copiedAiff
+        setElementsToVals()
+    }
+    @IBAction func deleteIdx(_ sender: Any) {
+        if currentIdx >= 1 {
+            currentIdx -= 1
+            setElementsToVals()
+            valArray.remove(at: currentIdx + 1)
+            timeArray.remove(at: currentIdx + 1)
+            anchorIsFrontFoots.remove(at: currentIdx + 1)
+        } else {
+            clear()
+        }
+    }
+    @IBAction func clearIdx(_ sender: Any) {
+        clear()
+    }
+    @IBAction func handShift(_ sender: Any) {
+        shiftPairs([(2, 4), (3, 5)])
+        setElementsToVals()
+    }
+    @IBAction func footShift(_ sender: Any) {
+        shiftPairs([(6, 8), (7, 9), (10, 11)])
+        anchorIsFrontFoots[currentIdx] = !anchorIsFrontFoot
+        setElementsToVals()
+    }
     
+    private func shiftPairs(_ toShift: [(Int, Int)]) {
+        let idx = currentIdx
+        for pair in toShift {
+            let t = valArray[idx][pair.0]
+            valArray[idx][pair.0] = valArray[idx][pair.1]
+            valArray[idx][pair.1] = t
+        }
+    }
+    func clear() {
+        headSlider.doubleValue = 0
+        bodySlider.doubleValue = 0
+        frontArmSlider.doubleValue = 0
+        frontHandSlider.doubleValue = 0
+        backArmSlider.doubleValue = 0
+        backHandSlider.doubleValue = 0
+        frontThighSlider.doubleValue = 0
+        frontCalfSlider.doubleValue = 0
+        backThighSlider.doubleValue = 0
+        backCalfSlider.doubleValue = 0
+        frontFootSlider.doubleValue = 0
+        backFootSlider.doubleValue = 0
+        heightText.stringValue = "0.0"
+        durText.stringValue = "0.0"
+        valArray[currentIdx] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        timeArray[currentIdx] = 0
+        anchorIsFrontFoots[currentIdx] = false
+        human.setAction(bodyRot: 0, headRot: 0, frontArmRot: 0, backArmRot: 0, frontHandRot: 0, backHandRot: 0, frontThighRot: 0, backThighRot: 0, frontCalfRot: 0, backCalfRot: 0, frontFootRot: 0, backFootRot: 0, yOffset: 0)
+    }
+    var actionStartTime: Date = Date()
+    @IBAction func play(_ sender: Any) {
+        if human.hasActions() {
+            human.removeAllActions()
+        } else {
+            if timeArray.first! > 0 {
+                let action = HumanAction(specs: valArray, durs: timeArray, shouldRepeat: shouldRepeat, anchorIsFrontFoots: anchorIsFrontFoots)
+                actionStartTime = Date()
+                human.runAction(action)
+            }
+        }
+    }
+    var exportActionStr: String = "new_action"
+    @IBAction func export(_ sender: Any) {
+        let specsString = valArray.map {"\($0.map {"\(round($0 * 1000) / 1000)"}.joined(separator: " "))"}.joined(separator: "  ")
+        let dursString = timeArray.map {"\(round($0 * 1000) / 1000)"}.joined(separator: " ")
+        let aiffsString = anchorIsFrontFoots[0..<valArray.count].map {"\($0)"}.joined(separator: " ")
+        let exportString = "\n\n\(exportActionStr)\n\(specsString)\n\(dursString)\n\(shouldRepeat)\n\(aiffsString)\n0"
+        print("\n\n\n\n\(Date())\n########################\(exportString)\n########################")
+    }
     
+    func setElementsToVals(_ idx: Int = -1) {
+        var index = currentIdx
+        if idx >= 0 {
+            index = idx
+        }
+        headSlider.doubleValue = Double(valArray[index][0])
+        bodySlider.doubleValue = Double(valArray[index][1])
+        frontArmSlider.doubleValue = Double(valArray[index][2])
+        frontHandSlider.doubleValue = Double(valArray[index][3])
+        backArmSlider.doubleValue = Double(valArray[index][4])
+        backHandSlider.doubleValue = Double(valArray[index][5])
+        frontThighSlider.doubleValue = Double(valArray[index][6])
+        frontCalfSlider.doubleValue = Double(valArray[index][7])
+        backThighSlider.doubleValue = Double(valArray[index][8])
+        backCalfSlider.doubleValue = Double(valArray[index][9])
+        frontFootSlider.doubleValue = Double(valArray[index][10])
+        backFootSlider.doubleValue = Double(valArray[index][11])
+        heightText.stringValue = "\(valArray[index][12])"
+        durText.stringValue = "\(timeArray[index])"
+        anchorIsFrontFoot = anchorIsFrontFoots[index]
+        human.setAction(bodyRot: CGFloat(valArray[index][1]), headRot: CGFloat(valArray[index][0]), frontArmRot: CGFloat(valArray[index][2]), backArmRot: CGFloat(valArray[index][4]), frontHandRot: CGFloat(valArray[index][3]), backHandRot: CGFloat(valArray[index][5]), frontThighRot: CGFloat(valArray[index][6]), backThighRot: CGFloat(valArray[index][8]), frontCalfRot: CGFloat(valArray[index][7]), backCalfRot: CGFloat(valArray[index][9]), frontFootRot: CGFloat(valArray[index][10]), backFootRot: CGFloat(valArray[index][11]), yOffset: CGFloat(valArray[index][12]))
+    }
     
+    var originalAction: HumanAction? = nil
+    func checkOut(action: HumanAction? = nil) {
+        originalAction = action
+        if let _action = action {
+            self.valArray = _action.actionPoints
+            self.timeArray = _action.durs
+            self.anchorIsFrontFoots = _action.anchorIsFrontFoots
+            self.shouldRepeat = _action.shouldRepeat
+        }
+        setElementsToVals()
+    }
+    func checkOut(action: String) {
+        checkOut(action: HumanAction.actions[action])
+    }
+    @IBAction func equipFrontHandWeapon(_ sender: Any) {
+        if human.frontHandWeapon == nil {
+            human.frontHandWeapon = Weapon(Temp_blade_combined())
+        } else {
+            human.frontHandWeapon = nil
+        }
+    }
+    @IBAction func equipBackHandWeapon(_ sender: Any) {
+        if human.backHandWeapon == nil {
+            human.backHandWeapon = Weapon(Temp_blade_combined())
+        } else {
+            human.backHandWeapon = nil
+        }
+    }
+    @IBAction func equipLongWeapon(_ sender: Any) {
+        if human.doubleHandedWeapon == nil {
+            human.doubleHandedWeapon = Weapon(Temp_long_blade_combined())
+            human.setWeaponTransform()
+        } else {
+            human.doubleHandedWeapon = nil
+        }
+    }
+    func update() {
+        if human.hasActions() {
+            time = (Date().timeIntervalSince(actionStartTime) * human.actionSpeed).truncatingRemainder(dividingBy: totalTime)
+        }
+    }
     
-    
+    var pickerData: [String] = []
+    func loadList() {
+        pickerData = Array(HumanAction.actions.keys).sorted(by: {$0 < $1})
+        picker.removeAllItems()
+        picker.addItem(withTitle: "new_action")
+        picker.addItems(withTitles: pickerData)
+    }
+    @IBAction func readAction(_ sender: Any) {
+        currentIdx = 0
+        exportActionStr = picker.titleOfSelectedItem!
+        export(self)
+        checkOut(action: exportActionStr)
+    }
     
     
     @IBOutlet var skView: SKView!
@@ -300,6 +516,10 @@ class ViewController: NSViewController {
                 
                 // Present the scene
                 view.presentScene(scene)
+                (scene as! GameScene).vc = self
+                
+                loadList()
+                
             }
             
             view.ignoresSiblingOrder = true

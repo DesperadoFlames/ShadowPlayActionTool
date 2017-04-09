@@ -989,14 +989,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ECD-u3-o2B">
-                                <rect key="frame" x="486" y="529" width="63" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="-0.1" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bt2-8Z-bpj">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
+                                <connections>
+                                    <action selector="heightMinusTen:" target="XfG-lQ-9wD" id="uQu-2d-KsT"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJW-h6-xt3">
                                 <rect key="frame" x="559" y="554" width="53" height="32"/>
@@ -1005,30 +1000,42 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="heightMinusOne:" target="XfG-lQ-9wD" id="1Zu-mn-f0Y"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xq8-Pw-a5C">
-                                <rect key="frame" x="547" y="529" width="72" height="32"/>
+                                <rect key="frame" x="559" y="529" width="72" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="-0.01" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4dA-F2-XFu">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="durMinusPPOne:" target="XfG-lQ-9wD" id="dti-78-CZg"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAx-ao-P3M">
-                                <rect key="frame" x="620" y="554" width="55" height="32"/>
+                                <rect key="frame" x="624" y="553" width="55" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="+1" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vcv-PR-cqo">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="heightPlusOne:" target="XfG-lQ-9wD" id="Aky-ea-CGq"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWa-Ww-gXm">
-                                <rect key="frame" x="616" y="529" width="74" height="32"/>
+                                <rect key="frame" x="624" y="529" width="74" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="+0.01" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5WN-ta-qTR">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="durPlusPPOne:" target="XfG-lQ-9wD" id="Ieu-ya-Svu"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvs-tH-XCx">
                                 <rect key="frame" x="689" y="554" width="63" height="32"/>
@@ -1037,6 +1044,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="heightPlusTen:" target="XfG-lQ-9wD" id="0XE-yN-Y66"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xRv-6X-oXV">
                                 <rect key="frame" x="686" y="529" width="66" height="32"/>
@@ -1045,6 +1055,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="durPlusPOne:" target="XfG-lQ-9wD" id="HOp-VV-GtI"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CiA-Bk-hVo">
                                 <rect key="frame" x="585" y="496" width="89" height="32"/>
@@ -1053,6 +1066,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Up:" target="XfG-lQ-9wD" id="7ao-cL-isV"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdT-dg-sOY">
                                 <rect key="frame" x="663" y="496" width="89" height="32"/>
@@ -1061,6 +1077,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Last:" target="XfG-lQ-9wD" id="d9S-q0-y6A"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uL7-Lm-9gL">
                                 <rect key="frame" x="359" y="496" width="89" height="32"/>
@@ -1069,6 +1088,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="First:" target="XfG-lQ-9wD" id="W59-We-U2J"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FOH-IE-M9p">
                                 <rect key="frame" x="444" y="496" width="89" height="32"/>
@@ -1077,6 +1099,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Down:" target="XfG-lQ-9wD" id="m1x-4r-xBo"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpL-ss-o3d">
                                 <rect key="frame" x="681" y="473" width="71" height="32"/>
@@ -1085,6 +1110,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="pasteIdx:" target="XfG-lQ-9wD" id="K78-C3-CC5"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9kI-6B-C5n">
                                 <rect key="frame" x="359" y="615" width="101" height="32"/>
@@ -1093,6 +1121,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="equipBackHandWeapon:" target="XfG-lQ-9wD" id="ahW-JT-VDJ"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axQ-qB-clE">
                                 <rect key="frame" x="517" y="615" width="101" height="32"/>
@@ -1101,6 +1132,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="equipFrontHandWeapon:" target="XfG-lQ-9wD" id="xEz-yv-fCp"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGO-4d-aUo">
                                 <rect key="frame" x="674" y="615" width="78" height="32"/>
@@ -1109,6 +1143,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="HiraginoSansGB-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="equipLongWeapon:" target="XfG-lQ-9wD" id="sVa-7p-peA"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkO-Mq-wyO">
                                 <rect key="frame" x="616" y="473" width="71" height="32"/>
@@ -1117,6 +1154,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="copyIdx:" target="XfG-lQ-9wD" id="nHf-CT-OAu"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjO-P3-TnU">
                                 <rect key="frame" x="550" y="473" width="71" height="32"/>
@@ -1125,6 +1165,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="HiraginoSansGB-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="footShift:" target="XfG-lQ-9wD" id="I4W-8J-9mn"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZiU-Jd-ugY">
                                 <rect key="frame" x="489" y="473" width="71" height="32"/>
@@ -1133,6 +1176,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="HiraginoSansGB-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="handShift:" target="XfG-lQ-9wD" id="jBD-Kd-maR"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dN7-01-t75">
                                 <rect key="frame" x="424" y="473" width="71" height="32"/>
@@ -1141,6 +1187,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="HiraginoSansGB-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Insert:" target="XfG-lQ-9wD" id="JfW-0V-Zfn"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aip-oh-3SD">
                                 <rect key="frame" x="359" y="473" width="71" height="32"/>
@@ -1149,6 +1198,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="HiraginoSansGB-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="resetX:" target="XfG-lQ-9wD" id="pvB-Fb-e4V"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Si-em-FMb">
                                 <rect key="frame" x="370" y="454" width="47" height="18"/>
@@ -1176,6 +1228,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="HiraginoSansGB-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="export:" target="XfG-lQ-9wD" id="902-Kx-7H1"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7TK-lg-C0L">
                                 <rect key="frame" x="597" y="449" width="94" height="32"/>
@@ -1184,6 +1239,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="play:" target="XfG-lQ-9wD" id="HFe-82-hzb"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPS-oK-z1q">
                                 <rect key="frame" x="532" y="449" width="71" height="32"/>
@@ -1203,6 +1261,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="clearIdx:" target="XfG-lQ-9wD" id="zxv-Tg-YRk"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aaa-oY-9Jb">
                                 <rect key="frame" x="576" y="416" width="67" height="32"/>
@@ -1211,6 +1272,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="HiraginoSansGB-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="deleteIdx:" target="XfG-lQ-9wD" id="ou2-e3-22v"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiS-lU-WYy">
                                 <rect key="frame" x="462" y="416" width="119" height="32"/>
@@ -1237,16 +1301,10 @@
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S9x-i2-MiL">
                                 <rect key="frame" x="363" y="590" width="324" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Kae-Xv-cGl" id="Vfq-f4-krd">
+                                <popUpButtonCell key="cell" type="push" alternateTitle="Select Action" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="Vfq-f4-krd">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="U9e-6K-m96">
-                                        <items>
-                                            <menuItem title="Item 1" state="on" id="Kae-Xv-cGl"/>
-                                            <menuItem title="Item 2" id="mHe-9A-zek"/>
-                                            <menuItem title="Item 3" id="1UK-YR-oqn"/>
-                                        </items>
-                                    </menu>
+                                    <menu key="menu" id="U9e-6K-m96"/>
                                 </popUpButtonCell>
                             </popUpButton>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pNG-2u-CMd">
@@ -1256,6 +1314,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".HiraginoSansGBInterface-W3"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="readAction:" target="XfG-lQ-9wD" id="faC-2u-fCa"/>
+                                </connections>
                             </button>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q4R-rQ-fPS">
                                 <rect key="frame" x="407" y="393" width="341" height="19"/>
@@ -1329,7 +1390,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbs-Ir-Mee">
-                                <rect key="frame" x="455" y="539" width="23" height="17"/>
+                                <rect key="frame" x="455" y="539" width="54" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0.0" id="80q-eu-ieY">
                                     <font key="font" metaFont="system"/>
@@ -1395,6 +1456,17 @@
                                     <action selector="frontFootEdit:" target="XfG-lQ-9wD" id="9vz-nX-qPX"/>
                                 </connections>
                             </slider>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ECD-u3-o2B">
+                                <rect key="frame" x="509" y="529" width="63" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="-0.1" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bt2-8Z-bpj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="durMinusPOne:" target="XfG-lQ-9wD" id="qxn-j3-cD7"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -1416,7 +1488,7 @@
                         <outlet property="headSlider" destination="vMN-70-2T1" id="m9X-JY-oGd"/>
                         <outlet property="heightText" destination="TsQ-tY-jte" id="wLL-62-WEP"/>
                         <outlet property="label" destination="7B1-rh-uLI" id="NSF-ld-KXq"/>
-                        <outlet property="picker" destination="S9x-i2-MiL" id="JRj-Wl-PVW"/>
+                        <outlet property="picker" destination="S9x-i2-MiL" id="Fi4-Rn-tYE"/>
                         <outlet property="repeatSwitch" destination="5Si-em-FMb" id="yoj-xF-NyI"/>
                         <outlet property="skView" destination="m2S-Jp-Qdl" id="qux-te-cT3"/>
                         <outlet property="timeText" destination="sj1-Uw-wTp" id="Df0-ol-rmr"/>

@@ -22,7 +22,7 @@ class HumanAction {
         self.anchorIsFrontFoots = anchorIsFrontFoots
     }
     
-    static let actions: Dictionary<String, HumanAction> = readFile()
+    static var actions: Dictionary<String, HumanAction> = readFile()
     
     static func readFile() -> Dictionary<String, HumanAction> {
         let path = Bundle.main.path(forResource: "actions", ofType: "txt")!
