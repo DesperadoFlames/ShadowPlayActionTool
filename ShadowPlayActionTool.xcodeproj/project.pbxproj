@@ -43,6 +43,20 @@
 		386B1FF51E9A2C3A0058C544 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B1FD61E9A2C3A0058C544 /* utils.swift */; };
 		386B1FF61E9A2C3A0058C544 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B1FD71E9A2C3A0058C544 /* Weapon.swift */; };
 		386B1FF71E9A2C3A0058C544 /* WeaponAux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B1FD81E9A2C3A0058C544 /* WeaponAux.swift */; };
+		386B20071E9A30DD0058C544 /* arm_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B1FF91E9A30DD0058C544 /* arm_1.png */; };
+		386B20081E9A30DD0058C544 /* arm_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B1FFA1E9A30DD0058C544 /* arm_2.png */; };
+		386B20091E9A30DD0058C544 /* body_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B1FFB1E9A30DD0058C544 /* body_1.png */; };
+		386B200A1E9A30DD0058C544 /* body_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B1FFC1E9A30DD0058C544 /* body_2.png */; };
+		386B200B1E9A30DD0058C544 /* calf_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B1FFD1E9A30DD0058C544 /* calf_1.png */; };
+		386B200C1E9A30DD0058C544 /* calf_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B1FFE1E9A30DD0058C544 /* calf_2.png */; };
+		386B200D1E9A30DD0058C544 /* foot_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B1FFF1E9A30DD0058C544 /* foot_1.png */; };
+		386B200E1E9A30DD0058C544 /* foot_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B20001E9A30DD0058C544 /* foot_2.png */; };
+		386B200F1E9A30DD0058C544 /* hand_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B20011E9A30DD0058C544 /* hand_1.png */; };
+		386B20101E9A30DD0058C544 /* hand_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B20021E9A30DD0058C544 /* hand_2.png */; };
+		386B20111E9A30DD0058C544 /* head_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B20031E9A30DD0058C544 /* head_1.png */; };
+		386B20121E9A30DD0058C544 /* head_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B20041E9A30DD0058C544 /* head_2.png */; };
+		386B20131E9A30DD0058C544 /* thigh_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B20051E9A30DD0058C544 /* thigh_1.png */; };
+		386B20141E9A30DD0058C544 /* thigh_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 386B20061E9A30DD0058C544 /* thigh_2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +98,20 @@
 		386B1FD61E9A2C3A0058C544 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		386B1FD71E9A2C3A0058C544 /* Weapon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		386B1FD81E9A2C3A0058C544 /* WeaponAux.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponAux.swift; sourceTree = "<group>"; };
+		386B1FF91E9A30DD0058C544 /* arm_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_1.png; sourceTree = "<group>"; };
+		386B1FFA1E9A30DD0058C544 /* arm_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_2.png; sourceTree = "<group>"; };
+		386B1FFB1E9A30DD0058C544 /* body_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_1.png; sourceTree = "<group>"; };
+		386B1FFC1E9A30DD0058C544 /* body_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_2.png; sourceTree = "<group>"; };
+		386B1FFD1E9A30DD0058C544 /* calf_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calf_1.png; sourceTree = "<group>"; };
+		386B1FFE1E9A30DD0058C544 /* calf_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calf_2.png; sourceTree = "<group>"; };
+		386B1FFF1E9A30DD0058C544 /* foot_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foot_1.png; sourceTree = "<group>"; };
+		386B20001E9A30DD0058C544 /* foot_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foot_2.png; sourceTree = "<group>"; };
+		386B20011E9A30DD0058C544 /* hand_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_1.png; sourceTree = "<group>"; };
+		386B20021E9A30DD0058C544 /* hand_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_2.png; sourceTree = "<group>"; };
+		386B20031E9A30DD0058C544 /* head_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_1.png; sourceTree = "<group>"; };
+		386B20041E9A30DD0058C544 /* head_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_2.png; sourceTree = "<group>"; };
+		386B20051E9A30DD0058C544 /* thigh_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thigh_1.png; sourceTree = "<group>"; };
+		386B20061E9A30DD0058C544 /* thigh_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thigh_2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +145,48 @@
 			isa = PBXGroup;
 			children = (
 				386B1FF81E9A2E6E0058C544 /* Resources */,
-				386B1FBA1E9A2C3A0058C544 /* Action.swift */,
+				386B20151E9A31350058C544 /* Docs */,
 				386B1FBB1E9A2C3A0058C544 /* actions.txt */,
+				386B1F791E9A12290058C544 /* AppDelegate.swift */,
+				386B1F7B1E9A12290058C544 /* GameScene.sks */,
+				386B1F7D1E9A12290058C544 /* Actions.sks */,
+				386B1F7F1E9A12290058C544 /* GameScene.swift */,
+				386B1F811E9A12290058C544 /* ViewController.swift */,
+				386B1F831E9A12290058C544 /* Assets.xcassets */,
+				386B1F851E9A12290058C544 /* Main.storyboard */,
+				386B1F881E9A12290058C544 /* Info.plist */,
+			);
+			path = ShadowPlayActionTool;
+			sourceTree = "<group>";
+		};
+		386B1FF81E9A2E6E0058C544 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				386B1FF91E9A30DD0058C544 /* arm_1.png */,
+				386B1FFA1E9A30DD0058C544 /* arm_2.png */,
+				386B1FFB1E9A30DD0058C544 /* body_1.png */,
+				386B1FFC1E9A30DD0058C544 /* body_2.png */,
+				386B1FFD1E9A30DD0058C544 /* calf_1.png */,
+				386B1FFE1E9A30DD0058C544 /* calf_2.png */,
+				386B1FFF1E9A30DD0058C544 /* foot_1.png */,
+				386B20001E9A30DD0058C544 /* foot_2.png */,
+				386B20011E9A30DD0058C544 /* hand_1.png */,
+				386B20021E9A30DD0058C544 /* hand_2.png */,
+				386B20031E9A30DD0058C544 /* head_1.png */,
+				386B20041E9A30DD0058C544 /* head_2.png */,
+				386B20051E9A30DD0058C544 /* thigh_1.png */,
+				386B20061E9A30DD0058C544 /* thigh_2.png */,
+				386B1FBE1E9A2C3A0058C544 /* back_1.png */,
+				386B1FD31E9A2C3A0058C544 /* temp_blade_combined.png */,
+				386B1FD41E9A2C3A0058C544 /* temp_long_blade_combined.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		386B20151E9A31350058C544 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				386B1FBA1E9A2C3A0058C544 /* Action.swift */,
 				386B1FBC1E9A2C3A0058C544 /* APN.swift */,
 				386B1FBD1E9A2C3A0058C544 /* Arm.swift */,
 				386B1FBF1E9A2C3A0058C544 /* Bag.swift */,
@@ -143,26 +211,8 @@
 				386B1FD61E9A2C3A0058C544 /* utils.swift */,
 				386B1FD71E9A2C3A0058C544 /* Weapon.swift */,
 				386B1FD81E9A2C3A0058C544 /* WeaponAux.swift */,
-				386B1F791E9A12290058C544 /* AppDelegate.swift */,
-				386B1F7B1E9A12290058C544 /* GameScene.sks */,
-				386B1F7D1E9A12290058C544 /* Actions.sks */,
-				386B1F7F1E9A12290058C544 /* GameScene.swift */,
-				386B1F811E9A12290058C544 /* ViewController.swift */,
-				386B1F831E9A12290058C544 /* Assets.xcassets */,
-				386B1F851E9A12290058C544 /* Main.storyboard */,
-				386B1F881E9A12290058C544 /* Info.plist */,
 			);
-			path = ShadowPlayActionTool;
-			sourceTree = "<group>";
-		};
-		386B1FF81E9A2E6E0058C544 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				386B1FBE1E9A2C3A0058C544 /* back_1.png */,
-				386B1FD31E9A2C3A0058C544 /* temp_blade_combined.png */,
-				386B1FD41E9A2C3A0058C544 /* temp_long_blade_combined.png */,
-			);
-			name = Resources;
+			name = Docs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,12 +275,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386B200F1E9A30DD0058C544 /* hand_1.png in Resources */,
+				386B200A1E9A30DD0058C544 /* body_2.png in Resources */,
+				386B20111E9A30DD0058C544 /* head_1.png in Resources */,
 				386B1F7C1E9A12290058C544 /* GameScene.sks in Resources */,
+				386B20081E9A30DD0058C544 /* arm_2.png in Resources */,
 				386B1F841E9A12290058C544 /* Assets.xcassets in Resources */,
+				386B200D1E9A30DD0058C544 /* foot_1.png in Resources */,
 				386B1FDD1E9A2C3A0058C544 /* back_1.png in Resources */,
+				386B20121E9A30DD0058C544 /* head_2.png in Resources */,
+				386B200E1E9A30DD0058C544 /* foot_2.png in Resources */,
 				386B1FF31E9A2C3A0058C544 /* temp_long_blade_combined.png in Resources */,
+				386B20071E9A30DD0058C544 /* arm_1.png in Resources */,
+				386B20131E9A30DD0058C544 /* thigh_1.png in Resources */,
+				386B20141E9A30DD0058C544 /* thigh_2.png in Resources */,
+				386B200B1E9A30DD0058C544 /* calf_1.png in Resources */,
+				386B20101E9A30DD0058C544 /* hand_2.png in Resources */,
+				386B200C1E9A30DD0058C544 /* calf_2.png in Resources */,
 				386B1FF21E9A2C3A0058C544 /* temp_blade_combined.png in Resources */,
 				386B1FDA1E9A2C3A0058C544 /* actions.txt in Resources */,
+				386B20091E9A30DD0058C544 /* body_1.png in Resources */,
 				386B1F7E1E9A12290058C544 /* Actions.sks in Resources */,
 				386B1F871E9A12290058C544 /* Main.storyboard in Resources */,
 			);

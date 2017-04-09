@@ -75,7 +75,7 @@ extension GameScene {
 //        human.backFoot = Foot_2()
         human.combine()
         self.addChild(human)
-        human.setScale(0.045)
+        human.setScale(0.05)
         human.position.y = -human.calculateAccumulatedFrame().minY - human.parent!.frame.height / 2
     }
 }
