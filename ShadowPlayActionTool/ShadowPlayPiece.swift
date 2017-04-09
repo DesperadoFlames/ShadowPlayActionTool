@@ -22,7 +22,7 @@ class ShadowPlayPiece: SKSpriteNode {
         self.attachPointNodes = attachPointNodes
         self.mass = mass
         let texture = SKTexture(imageNamed: imgStr)
-        super.init(texture: texture, color: .clear, size: texture.size())
+        super.init(texture: texture, color: .clear, size: texture.size() * 16.666666667)
         postInit()
     }
     

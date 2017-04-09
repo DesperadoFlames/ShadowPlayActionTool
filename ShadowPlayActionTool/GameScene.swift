@@ -11,7 +11,7 @@ import SpriteKit
 class GameScene: SKScene {
     static var shared: GameScene? = nil
     
-    var human: Human = Human(body: Body_2(), head: Head_2())
+    var human: Human = Human(body: Body_1(), head: Head_1())
     
     override func didMove(to view: SKView) {
         GameScene.shared = self
@@ -21,6 +21,7 @@ class GameScene: SKScene {
         addChildren(args: background, floatingItemContainer)
         //        demoScroll()
         demoHuman()
+//        demoHead()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -32,23 +33,9 @@ class GameScene: SKScene {
 /// For testing
 extension GameScene {
     
-    //    func demoWorkStationScene() {
-    //        let workStation = WorkStation()
-    //        self.addChild(workStation)
-    //    }
-    
     func demoHead() {
-        let head = SKSpriteNode(imageNamed: "head")
+        let head = SKSpriteNode(imageNamed: "head_1")
         self.addChild(head)
-    }
-    
-    func demoScroll() {
-        let designTable = DesignTable()
-        let bag = Bag()
-        //        let s = Scroll(width: 500, height: 300, isScrollable: true, isVertical: false, maxContentLength: 1500)
-        self.addChildren(args: bag, designTable)
-        bag.state = .open
-        //        bag.expandToLength(300)
     }
     
     func demoHuman() {
@@ -73,6 +60,8 @@ extension GameScene {
 //        human.backCalf = Calf_2()
 //        human.frontFoot = Foot_2()
 //        human.backFoot = Foot_2()
+        
+        
         human.combine()
         self.addChild(human)
         human.setScale(0.05)

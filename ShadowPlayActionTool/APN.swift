@@ -108,7 +108,7 @@ class AttachPointNode: SKShapeNode {
     
     func reanchor() {
         let p = self.parent as! ShadowPlayPiece
-        let parentSize = p.texture!.size()
+        let parentSize = p.texture!.size() * 16.666666667
         self.anchorPosX = initialPoint.x / parentSize.width
         self.anchorPosY = initialPoint.y / parentSize.height
         reposition(p: p)
