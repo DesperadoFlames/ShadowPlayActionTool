@@ -172,7 +172,7 @@ class Hand: BodyPart {
     override func postInit() {
         super.postInit()
         self.addChild(self.childAnchor)
-        childAnchor.position = self.attachPointNodes[1].position
+        childAnchor.position = self.attachPointNodes[1].position + CGPoint(x: 300, y: 100)
     }
     
     override func addChild(_ node: SKNode) {
