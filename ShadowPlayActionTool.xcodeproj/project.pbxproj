@@ -147,6 +147,7 @@
 				386B1FF81E9A2E6E0058C544 /* Resources */,
 				386B20151E9A31350058C544 /* Docs */,
 				386B1FBB1E9A2C3A0058C544 /* actions.txt */,
+				386B1FBA1E9A2C3A0058C544 /* Action.swift */,
 				386B1F791E9A12290058C544 /* AppDelegate.swift */,
 				386B1F7B1E9A12290058C544 /* GameScene.sks */,
 				386B1F7D1E9A12290058C544 /* Actions.sks */,
@@ -186,7 +187,6 @@
 		386B20151E9A31350058C544 /* Docs */ = {
 			isa = PBXGroup;
 			children = (
-				386B1FBA1E9A2C3A0058C544 /* Action.swift */,
 				386B1FBC1E9A2C3A0058C544 /* APN.swift */,
 				386B1FBD1E9A2C3A0058C544 /* Arm.swift */,
 				386B1FBF1E9A2C3A0058C544 /* Bag.swift */,
@@ -491,6 +491,7 @@
 				386B1F8D1E9A12290058C544 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

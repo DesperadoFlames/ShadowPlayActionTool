@@ -1125,28 +1125,6 @@
                                     <action selector="equipBackHandWeapon:" target="XfG-lQ-9wD" id="ahW-JT-VDJ"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axQ-qB-clE">
-                                <rect key="frame" x="517" y="615" width="101" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="后手短武器" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kg2-FK-ghV">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name=".HiraKakuInterface-W3"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="equipFrontHandWeapon:" target="XfG-lQ-9wD" id="xEz-yv-fCp"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGO-4d-aUo">
-                                <rect key="frame" x="674" y="615" width="78" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="长武器" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZAi-d2-Msh">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name="HiraginoSansGB-W3"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="equipLongWeapon:" target="XfG-lQ-9wD" id="sVa-7p-peA"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkO-Mq-wyO">
                                 <rect key="frame" x="616" y="473" width="71" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1467,11 +1445,88 @@
                                     <action selector="durMinusPOne:" target="XfG-lQ-9wD" id="qxn-j3-cD7"/>
                                 </connections>
                             </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzj-ea-pbP">
+                                <rect key="frame" x="754" y="505" width="288" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Vba-9K-RMK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUU-J6-iGd">
+                                <rect key="frame" x="754" y="626" width="53" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="导出为：" id="HoV-lh-RmR">
+                                    <font key="font" size="13" name=".HiraginoSansGBInterface-W3"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHk-y6-n7N">
+                                <rect key="frame" x="801" y="626" width="241" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Action Name Here" drawsBackground="YES" id="ekc-SS-JP6">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="onEditName:" target="XfG-lQ-9wD" id="4em-7c-65B"/>
+                                </connections>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axQ-qB-clE">
+                                <rect key="frame" x="459" y="615" width="101" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="后手短武器" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kg2-FK-ghV">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".HiraKakuInterface-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="equipFrontHandWeapon:" target="XfG-lQ-9wD" id="xEz-yv-fCp"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zkC-6l-ULt">
+                                <rect key="frame" x="748" y="471" width="101" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="添加此动作" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Tyv-8U-vQW">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".HiraKakuInterface-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addAction:" target="XfG-lQ-9wD" id="yac-1y-rzl"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7V4-tk-9aV">
+                                <rect key="frame" x="848" y="471" width="101" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="删除此动作" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PtS-aV-GHp">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".HiraginoSansGBInterface-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="deleteAction:" target="XfG-lQ-9wD" id="afX-uW-8D2"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJa-FB-1Tg">
+                                <rect key="frame" x="947" y="471" width="101" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="保存到桌面" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EaC-56-kd7">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".HiraKakuInterface-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveToDesktop:" target="XfG-lQ-9wD" id="ALq-RT-ak5"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="Alpha" destination="iPS-oK-z1q" id="hSB-RC-09U"/>
+                        <outlet property="actionNameField" destination="bHk-y6-n7N" id="DxI-xp-3E0"/>
                         <outlet property="actionNoText" destination="9Dx-Re-Amq" id="KGR-pZ-uby"/>
+                        <outlet property="actionTextField" destination="lzj-ea-pbP" id="9rg-Vp-Izx"/>
+                        <outlet property="addButton" destination="zkC-6l-ULt" id="BRG-z9-Ylu"/>
                         <outlet property="anchorIsFrontFootSwitch" destination="mfY-1M-lac" id="BaE-rT-dZm"/>
                         <outlet property="backArmSlider" destination="exe-dp-IUP" id="n5L-nh-Ztn"/>
                         <outlet property="backCalfSlider" destination="pHN-zk-OUA" id="FkI-dB-DTw"/>
@@ -1479,6 +1534,7 @@
                         <outlet property="backHandSlider" destination="PMK-2Y-Lih" id="Swb-6K-qsY"/>
                         <outlet property="backThighSlider" destination="Y6U-hV-49p" id="ZuU-Fn-A2o"/>
                         <outlet property="bodySlider" destination="f1k-bV-Net" id="Djp-pL-dub"/>
+                        <outlet property="deleteButton" destination="7V4-tk-9aV" id="FZk-va-0lF"/>
                         <outlet property="durText" destination="tbs-Ir-Mee" id="T4h-Fs-JpJ"/>
                         <outlet property="frontArmSlider" destination="m8d-Nr-nTj" id="nxC-LZ-2g2"/>
                         <outlet property="frontCalfSlider" destination="3Fq-mu-f4t" id="dfD-K5-gAw"/>

@@ -36,4 +36,51 @@ class HumanAction {
             fatalError("Error reading actions")
         }
     }
+    
+    static func addAction(actionStr: String) {
+        let str = actionStr.trimmingCharacters(in: .whitespacesAndNewlines)
+        if str.components(separatedBy: "\n").count != 6 { return }
+        let path = Bundle.main.path(forResource: "actions", ofType: "txt")!
+        do {
+            var data: [String] = try String(contentsOfFile: path, encoding: .utf8).components(separatedBy: "\n\n")
+            data = data.filter {
+                let item = $0.trimmingCharacters(in: .whitespacesAndNewlines)
+                return item != "" && item.components(separatedBy: "\n")[0] != actionStr.components(separatedBy: "\n")[0]
+            }
+            data.append(actionStr.trimmingCharacters(in: .whitespacesAndNewlines))
+            try data.joined(separator: "\n\n").write(toFile: path, atomically: false, encoding: .ascii)
+            actions = readFile()
+        } catch {
+            fatalError("Error reading actions")
+        }
+    }
+
+    static func deleteAction(name: String) {
+        if name.trimmingCharacters(in: .whitespacesAndNewlines) == "" { return }
+        let path = Bundle.main.path(forResource: "actions", ofType: "txt")!
+        do {
+            var data: [String] = try String(contentsOfFile: path, encoding: .utf8).components(separatedBy: "\n\n")
+            data = data.filter {
+                let item = $0.trimmingCharacters(in: .whitespacesAndNewlines)
+                return item != "" && item.components(separatedBy: "\n")[0] != name.components(separatedBy: "\n")[0]
+            }
+            try data.joined(separator: "\n\n").write(toFile: path, atomically: false, encoding: .ascii)
+            actions = readFile()
+        } catch {
+            fatalError("Error reading actions")
+        }
+    }
+    
+    static func saveToDesktop() {
+        let paths = NSSearchPathForDirectoriesInDomains(.desktopDirectory, .userDomainMask, true)
+        if let desktopPath = paths.first {
+            let path = Bundle.main.path(forResource: "actions", ofType: "txt")!
+            do {
+                let data = try String(contentsOfFile: path, encoding: .utf8)
+                try data.write(toFile: desktopPath + "/actions.txt", atomically: true, encoding: .ascii)
+            } catch {
+                fatalError("Error reading actions")
+            }
+        }
+    }
 }

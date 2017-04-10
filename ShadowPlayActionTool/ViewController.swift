@@ -41,6 +41,10 @@ class ViewController: NSViewController {
     @IBOutlet weak var actionNoText: NSTextField!
     @IBOutlet weak var timeText: NSTextField!
     @IBOutlet weak var picker: NSPopUpButton!
+    @IBOutlet weak var actionNameField: NSTextField!
+    @IBOutlet weak var actionTextField: NSTextField!
+    @IBOutlet weak var addButton: NSButton!
+    @IBOutlet weak var deleteButton: NSButton!
     
     var copiedVals: [CGFloat] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     var copiedDur: TimeInterval = 0
@@ -414,13 +418,35 @@ class ViewController: NSViewController {
             }
         }
     }
+    @IBAction func addAction(_ sender: Any) {
+        HumanAction.addAction(actionStr: actionNameField.stringValue + "\n" + actionTextField.stringValue)
+        loadList()
+    }
+    @IBAction func deleteAction(_ sender: Any) {
+        HumanAction.deleteAction(name: actionNameField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines))
+        loadList()
+    }
+    @IBAction func saveToDesktop(_ sender: Any) {
+        HumanAction.saveToDesktop()
+    }
+    @IBAction func onEditName(_ sender: NSTextField) {
+        let nameTitle = sender.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+        if (pickerData.index(of: nameTitle) != nil) && (nameTitle != "") {
+            addButton.title = "更新此动作"
+            deleteButton.isEnabled = true
+        } else {
+            addButton.title = "添加此动作"
+            deleteButton.isEnabled = false
+        }
+    }
     var exportActionStr: String = "new_action"
     @IBAction func export(_ sender: Any) {
         let specsString = valArray.map {"\($0.map {"\(round($0 * 1000) / 1000)"}.joined(separator: " "))"}.joined(separator: "  ")
         let dursString = timeArray.map {"\(round($0 * 1000) / 1000)"}.joined(separator: " ")
         let aiffsString = anchorIsFrontFoots[0..<valArray.count].map {"\($0)"}.joined(separator: " ")
-        let exportString = "\n\n\(exportActionStr)\n\(specsString)\n\(dursString)\n\(shouldRepeat)\n\(aiffsString)\n0"
-        print("\n\n\n\n\(Date())\n########################\(exportString)\n########################")
+        actionTextField.stringValue = "\(specsString)\n\(dursString)\n\(shouldRepeat)\n\(aiffsString)\n0"
+        actionNameField.stringValue = exportActionStr
+        onEditName(actionNameField)
     }
     
     func setElementsToVals(_ idx: Int = -1) {
@@ -474,14 +500,6 @@ class ViewController: NSViewController {
             human.backHandWeapon = nil
         }
     }
-    @IBAction func equipLongWeapon(_ sender: Any) {
-        if human.doubleHandedWeapon == nil {
-            human.doubleHandedWeapon = Weapon(Temp_long_blade_combined())
-            human.setWeaponTransform()
-        } else {
-            human.doubleHandedWeapon = nil
-        }
-    }
     func update() {
         if human.hasActions() {
             time = (Date().timeIntervalSince(actionStartTime) * human.actionSpeed).truncatingRemainder(dividingBy: totalTime)
@@ -498,7 +516,6 @@ class ViewController: NSViewController {
     @IBAction func readAction(_ sender: Any) {
         currentIdx = 0
         exportActionStr = picker.titleOfSelectedItem!
-        export(self)
         checkOut(action: exportActionStr)
     }
     
@@ -519,13 +536,11 @@ class ViewController: NSViewController {
                 (scene as! GameScene).vc = self
                 
                 loadList()
+                onEditName(actionNameField)
                 
             }
             
             view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
         }
     }
 }
