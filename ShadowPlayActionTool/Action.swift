@@ -28,7 +28,7 @@ class HumanAction {
         let path = Bundle.main.path(forResource: "actions", ofType: "txt")!
         do {
             let data: [(String, HumanAction)] = try String(contentsOfFile: path, encoding: .utf8).components(separatedBy: "\n\n").map({
-                let elements = $0.components(separatedBy: .newlines)
+                let elements = $0.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines)
                 return (elements[0], HumanAction(specs: elements[1].components(separatedBy: "  ").map { $0.components(separatedBy: " ").map {CGFloat(Double($0)!)} }, durs: elements[2].components(separatedBy: " ").map {Double($0)!}, shouldRepeat: Bool(elements[3])!, anchorIsFrontFoots: elements[4].components(separatedBy: " ").map {Bool($0)!}))
             })
             return Dictionary(elements: data)
