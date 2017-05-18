@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -840,7 +840,7 @@
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y6U-hV-49p">
                                 <rect key="frame" x="48" y="521" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <sliderCell key="cell" state="on" alignment="left" minValue="-1.57079632679" maxValue="1.57079632679" tickMarkPosition="above" sliderType="linear" id="ipS-ie-MBb"/>
+                                <sliderCell key="cell" state="on" alignment="left" minValue="-1.57079632679" maxValue="3.1400000000000001" tickMarkPosition="above" sliderType="linear" id="ipS-ie-MBb"/>
                                 <connections>
                                     <action selector="backThighEdit:" target="XfG-lQ-9wD" id="cXX-y6-6t9"/>
                                 </connections>
@@ -1126,7 +1126,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkO-Mq-wyO">
-                                <rect key="frame" x="616" y="473" width="71" height="32"/>
+                                <rect key="frame" x="620" y="473" width="71" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="复制" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K92-Pf-eXs">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1136,19 +1136,8 @@
                                     <action selector="copyIdx:" target="XfG-lQ-9wD" id="nHf-CT-OAu"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjO-P3-TnU">
-                                <rect key="frame" x="550" y="473" width="71" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="换脚" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CGf-e8-vjp">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name="HiraginoSansGB-W3"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="footShift:" target="XfG-lQ-9wD" id="I4W-8J-9mn"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZiU-Jd-ugY">
-                                <rect key="frame" x="489" y="473" width="71" height="32"/>
+                                <rect key="frame" x="495" y="473" width="71" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="换手" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IZZ-aG-LoB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1158,21 +1147,10 @@
                                     <action selector="handShift:" target="XfG-lQ-9wD" id="jBD-Kd-maR"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dN7-01-t75">
-                                <rect key="frame" x="424" y="473" width="71" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="插入" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zmU-Yy-YSt">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name="HiraginoSansGB-W3"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="Insert:" target="XfG-lQ-9wD" id="JfW-0V-Zfn"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aip-oh-3SD">
-                                <rect key="frame" x="359" y="473" width="71" height="32"/>
+                                <rect key="frame" x="355" y="473" width="47" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="x=0" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="N06-ZF-n55">
+                                <buttonCell key="cell" type="push" title="&lt;" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="N06-ZF-n55">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="HiraginoSansGB-W3"/>
                                 </buttonCell>
@@ -1413,7 +1391,7 @@
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOJ-K8-h9C">
                                 <rect key="frame" x="48" y="397" width="243" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <sliderCell key="cell" state="on" alignment="left" minValue="-1.57079632679" maxValue="1.57079632679" tickMarkPosition="above" sliderType="linear" id="6uX-L5-97x"/>
+                                <sliderCell key="cell" state="on" alignment="left" minValue="-1.57079632679" maxValue="3.1400000000000001" tickMarkPosition="above" sliderType="linear" id="6uX-L5-97x"/>
                                 <connections>
                                     <action selector="frontThighEdit:" target="XfG-lQ-9wD" id="1y7-qF-lki"/>
                                 </connections>
@@ -1517,6 +1495,50 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="saveToDesktop:" target="XfG-lQ-9wD" id="ALq-RT-ak5"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fjQ-Z1-Nrk">
+                                <rect key="frame" x="391" y="473" width="47" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="&gt;" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RtA-mX-XTZ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name="HiraginoSansGB-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="resetX_r:" target="XfG-lQ-9wD" id="pkO-nf-NJa"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjO-P3-TnU">
+                                <rect key="frame" x="556" y="473" width="71" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="换脚" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CGf-e8-vjp">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name="HiraginoSansGB-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="footShift:" target="XfG-lQ-9wD" id="I4W-8J-9mn"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w4G-AL-V3J">
+                                <rect key="frame" x="636" y="358" width="119" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="插入当前状态" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JJv-kt-Zc2">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name="HiraginoSansGB-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="InsertCurrent:" target="XfG-lQ-9wD" id="f7v-iV-rqc"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dN7-01-t75">
+                                <rect key="frame" x="430" y="473" width="71" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="插入" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zmU-Yy-YSt">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name="HiraginoSansGB-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="Insert:" target="XfG-lQ-9wD" id="JfW-0V-Zfn"/>
                                 </connections>
                             </button>
                         </subviews>

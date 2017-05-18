@@ -311,6 +311,10 @@ class ViewController: NSViewController {
     @IBAction func resetX(_ sender: Any) {
         human.position.x = -450
     }
+    @IBAction func resetX_r(_ sender: Any) {
+        human.position.x = 450
+    }
+    
     @IBAction func First(_ sender: Any) {
         currentIdx = 0
         setElementsToVals()
@@ -332,6 +336,15 @@ class ViewController: NSViewController {
         anchorIsFrontFoots.insert(anchorIsFrontFoots[currentIdx], at: currentIdx+1)
         currentIdx += 1
         setElementsToVals()
+    }
+    @IBAction func InsertCurrent(_ sender: Any) {
+        let temp = [human.head!.zRotation, human.body!.zRotation, human.frontArm!.zRotation, human.frontHand!.zRotation, human.backArm!.zRotation, human.backHand!.zRotation, human.frontThigh!.zRotation, human.frontCalf!.zRotation, human.backThigh!.zRotation, human.backCalf!.zRotation, human.frontFoot!.zRotation, human.backFoot!.zRotation, 0]
+        valArray.insert(temp, at: currentIdx+1)
+        timeArray.insert(timeArray[currentIdx], at: currentIdx+1)
+        anchorIsFrontFoots.insert(anchorIsFrontFoots[currentIdx], at: currentIdx+1)
+        currentIdx += 1
+        setElementsToVals()
+        human.setWeaponTransform()
     }
     @IBAction func Down(_ sender: Any) {
         if currentIdx >= 1 {
